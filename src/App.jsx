@@ -38,7 +38,7 @@ function App() {
 
     try {
     // Updated backend URL to port 8080
-    const response = await fetch(" https://8d10-2405-201-a407-839-f0e4-2aaa-57c5-ff15.ngrok-free.app", {
+    const response = await fetch("https://8d10-2405-201-a407-839-f0e4-2aaa-57c5-ff15.ngrok-free.app", {
       method: "POST",
       body: formData,
     });
