@@ -37,14 +37,11 @@ function App() {
     formData.append("image", file);
 
     try {
-      // Hardcoded ngrok backend URL
-      const response = await fetch(
-        "https://e138-2405-201-a407-839-9d6e-3b1b-e1d4-c5f2.ngrok-free.app/predict",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+    // Updated backend URL to port 8080
+    const response = await fetch("http://127.0.0.1:8080/predict", {
+      method: "POST",
+      body: formData,
+    });
       if (!response.ok) throw new Error("Backend error");
       const data = await response.json();
       setResult(data);
