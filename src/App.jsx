@@ -38,7 +38,7 @@ function App() {
 
     try {
     // Updated backend URL to port 8080
-    const response = await fetch("http://127.0.0.1:8080/predict", {
+    const response = await fetch("http://127.0.0.1:5000/predict", {
       method: "POST",
       body: formData,
     });
