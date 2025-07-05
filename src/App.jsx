@@ -37,8 +37,9 @@ function App() {
     formData.append("image", file);
 
     try {
+      // Hardcoded ngrok backend URL
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/predict`,
+        "https://e138-2405-201-a407-839-9d6e-3b1b-e1d4-c5f2.ngrok-free.app/predict",
         {
           method: "POST",
           body: formData,
