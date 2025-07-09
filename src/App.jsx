@@ -38,10 +38,11 @@ function App() {
 
     try {
     // Updated backend URL to port 8080
-    const response = await fetch("https://8d10-2405-201-a407-839-f0e4-2aaa-57c5-ff15.ngrok-free.app/predict", {
-      method: "POST",
+      const response = await fetch("http://localhost:8080/predict", {
+       method: "POST",
       body: formData,
     });
+
       if (!response.ok) throw new Error("Backend error");
       const data = await response.json();
       setResult(data);
